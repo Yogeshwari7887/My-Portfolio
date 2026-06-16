@@ -1,14 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Download, ArrowRight, Github, Linkedin } from 'lucide-react';
+import { Download, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 
 const roles = ['Full Stack Developer', 'Python Developer'];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
-    opacity: 1,
-    y: 0,
+    opacity: 1, y: 0,
     transition: { duration: 0.6, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] },
   }),
 };
@@ -20,9 +19,14 @@ const metrics = [
   { value: '7 Weeks', label: 'Training' },
 ];
 
+const socials = [
+  { icon: <Github size={18} />, href: 'https://github.com/Yogeshwari7887', label: 'GitHub', tooltip: 'GitHub' },
+  { icon: <Linkedin size={18} />, href: 'https://linkedin.com', label: 'LinkedIn', tooltip: 'LinkedIn' },
+  { icon: <Mail size={18} />, href: 'mailto:yogeshwari7887@gmail.com', label: 'Email', tooltip: 'yogeshwari7887@gmail.com' },
+];
+
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
-  const btnRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,11 +56,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="container">
         <div className="hero-content">
-          <motion.div
-            className="hero-left"
-            initial="hidden"
-            animate="visible"
-          >
+          <motion.div className="hero-left" initial="hidden" animate="visible">
             <motion.div className="hero-tag" custom={0} variants={fadeUp}>
               <span className="dot" />
               Full Stack Developer
@@ -95,8 +95,7 @@ export default function Hero() {
                 onMouseMove={handleMagnetic}
                 onMouseLeave={handleMagneticLeave}
               >
-                <Download size={16} />
-                Download Resume
+                <Download size={16} /> Download Resume
               </a>
               <a
                 href="#projects"
@@ -105,30 +104,24 @@ export default function Hero() {
                 onMouseMove={handleMagnetic}
                 onMouseLeave={handleMagneticLeave}
               >
-                View Projects
-                <ArrowRight size={16} />
+                View Projects <ArrowRight size={16} />
               </a>
             </motion.div>
 
             <motion.div className="hero-socials" custom={5} variants={fadeUp}>
-              <a
-                href="https://github.com/Yogeshwari7887"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                aria-label="GitHub"
-              >
-                <Github size={18} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith('mailto') ? undefined : '_blank'}
+                  rel={s.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                  className="social-icon"
+                  aria-label={s.label}
+                  data-tooltip={s.tooltip}
+                >
+                  {s.icon}
+                </a>
+              ))}
             </motion.div>
           </motion.div>
 
@@ -151,18 +144,13 @@ export default function Hero() {
           className="hero-metrics"
           initial="hidden"
           animate="visible"
-          variants={{
-            visible: { transition: { staggerChildren: 0.1, delayChildren: 0.7 } },
-          }}
+          variants={{ visible: { transition: { staggerChildren: 0.1, delayChildren: 0.7 } } }}
         >
           {metrics.map((m, i) => (
             <motion.div
               key={i}
               className="metric-card"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-              }}
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
             >
               <div className="metric-value">{m.value}</div>
               <div className="metric-label">{m.label}</div>
