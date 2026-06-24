@@ -29,6 +29,8 @@ const categories = [
     name: 'Backend Development',
     skills: [
       { name: 'Django', icon: `${DEVICON}/django/django-plain.svg`, color: '#092E20', featured: true, invert: true },
+      { name: 'Flask', icon: `${DEVICON}/flask/flask-original.svg`, color: '#FFFFFF', invert: true },
+      { name: 'PHP', icon: `${DEVICON}/php/php-original.svg`, color: '#777BB4' },
     ],
   },
   {
@@ -43,8 +45,11 @@ const categories = [
     skills: [
       { name: 'Git', icon: `${DEVICON}/git/git-original.svg`, color: '#F05032' },
       { name: 'GitHub', icon: `${DEVICON}/github/github-original.svg`, color: '#c9d1d9', invert: true },
+      { name: 'Postman', icon: `${DEVICON}/postman/postman-original.svg`, color: '#FF6C37' },
       { name: 'VS Code', icon: `${DEVICON}/vscode/vscode-original.svg`, color: '#007ACC' },
       { name: 'Android Studio', icon: `${DEVICON}/androidstudio/androidstudio-original.svg`, color: '#3DDC84' },
+      { name: 'Vercel', icon: `${DEVICON}/vercel/vercel-original.svg`, color: '#FFFFFF', invert: true },
+      { name: 'Render', icon: 'https://cdn.simpleicons.org/render/46E3B7', color: '#46E3B7' },
     ],
   },
 ];

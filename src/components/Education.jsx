@@ -4,6 +4,15 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const educationData = [
   {
+    icon: <GraduationCap size={22} />,
+    institution: 'Vishwakarma Institute of Technology, Pune',
+    degree: 'B.Tech Information Technology',
+    score: '9.4',
+    scoreLabel: 'CGPA',
+    duration: 'Expected 2028',
+    description: 'Focused on software engineering, full-stack development, modern web technologies, and practical project-based learning.',
+  },
+  {
     icon: <Award size={22} />,
     institution: 'Government Polytechnic Jalgaon',
     degree: 'Diploma in Computer Engineering',
@@ -13,13 +22,13 @@ const educationData = [
     description: 'Built strong foundations in programming, databases, software development, and computer engineering fundamentals.',
   },
   {
-    icon: <GraduationCap size={22} />,
-    institution: 'Vishwakarma Institute of Technology, Pune',
-    degree: 'B.Tech Information Technology',
-    score: '9.4',
-    scoreLabel: 'CGPA',
-    duration: 'Expected 2028',
-    description: 'Focused on software engineering, full-stack development, modern web technologies, and practical project-based learning.',
+    icon: <Award size={22} />,
+    institution: 'Maharashtra State Board of Secondary Education',
+    degree: 'SSC — Class 10th',
+    score: '94.2%',
+    scoreLabel: 'Score',
+    duration: '2019 – 2020',
+    description: 'Achieved academic excellence with a strong foundation in core subjects, laying the groundwork for a career in technology.',
   },
 ];
 

@@ -198,275 +198,162 @@
   margin-bottom: 8px;
 }
 
-/* ── Main Showcase Card ── */
-.exp-showcase {
+/* ── Training Card (Simplified) ── */
+.tr-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
-  padding: 0;
-  margin-top: 48px;
-  position: relative;
+  margin-top: 40px;
   overflow: hidden;
-  transition: all var(--transition-base);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
-.exp-showcase:hover {
+.tr-card:hover {
   border-color: var(--border-hover);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg);
 }
 
-.exp-showcase-accent {
+.tr-accent {
   height: 3px;
   background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
   background-size: 200% 100%;
   animation: shimmer-accent 4s ease infinite;
 }
 
-.exp-showcase-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
-  margin: 0 40px;
-}
-
-/* ── Company Header ── */
-.exp-company-header {
+/* Header */
+.tr-header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 36px 40px;
+  gap: 16px;
+  padding: 28px 32px;
   flex-wrap: wrap;
 }
 
-.exp-company-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--primary-muted), rgba(240, 201, 135, 0.08));
+.tr-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--primary-muted);
   border: 1px solid rgba(95, 168, 168, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  flex-shrink: 0;
-  transition: all var(--transition-base);
-}
-.exp-showcase:hover .exp-company-icon {
-  box-shadow: 0 0 20px rgba(95, 168, 168, 0.12);
 }
 
-.exp-company-info {
-  flex: 1;
-  min-width: 200px;
-}
+.tr-info { flex: 1; min-width: 160px; }
 
-.exp-company-name {
+.tr-company {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 2.5vw, 26px);
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 4px;
+  margin: 0 0 3px;
 }
 
-.exp-company-role {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-subheading);
-  font-size: 15px;
-  font-weight: 500;
+.tr-role {
+  font-size: 14px;
   color: var(--secondary);
   margin: 0;
 }
 
-.exp-duration-badge {
+.tr-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-subheading);
-  font-size: 14px;
+  gap: 6px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--accent);
-  padding: 10px 22px;
+  padding: 7px 16px;
   background: var(--accent-muted);
-  border: 1px solid rgba(240, 201, 135, 0.18);
+  border: 1px solid rgba(240, 201, 135, 0.15);
   border-radius: var(--radius-full);
   white-space: nowrap;
 }
 
-/* ── Generic Block ── */
-.exp-block {
-  padding: 28px 40px;
+/* Sections */
+.tr-section {
+  padding: 20px 32px;
+  border-top: 1px solid var(--border);
 }
 
-.exp-block-title {
-  font-family: var(--font-subheading);
-  font-size: 12px;
+.tr-label {
+  display: block;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   color: var(--text-tertiary);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-/* ── Technology Badges ── */
-.exp-tech-badges {
+/* Tags */
+.tr-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
-.exp-tech-badge {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-subheading);
-  font-size: 13px;
+.tr-tag {
+  font-size: 12px;
   font-weight: 600;
-  padding: 8px 18px;
+  padding: 5px 14px;
   border-radius: var(--radius-full);
-  background: rgba(95, 168, 168, 0.08);
+  background: rgba(95, 168, 168, 0.07);
   color: var(--secondary);
-  border: 1px solid rgba(95, 168, 168, 0.15);
-  transition: all var(--transition-base);
-  cursor: default;
+  border: 1px solid rgba(95, 168, 168, 0.14);
+  transition: background var(--transition-base), border-color var(--transition-base);
 }
-.exp-tech-badge:hover {
-  background: rgba(95, 168, 168, 0.16);
-  border-color: rgba(95, 168, 168, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.tr-tag:hover {
+  background: rgba(95, 168, 168, 0.14);
+  border-color: rgba(95, 168, 168, 0.28);
 }
 
-/* ── Key Learnings Grid ── */
-.exp-learnings-grid {
+/* Learnings */
+.tr-learnings {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 10px;
 }
 
-.exp-learning-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 18px;
-  background: rgba(13, 20, 21, 0.35);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  transition: all var(--transition-base);
-}
-.exp-learning-item:hover {
-  border-color: var(--border-hover);
-  background: rgba(13, 20, 21, 0.55);
-  transform: translateX(4px);
-}
-
-.exp-check-icon {
-  color: var(--primary);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-/* ── Training Outcome ── */
-.exp-outcome-card {
-  margin: 0 40px;
-  padding: 28px 32px;
-  background: linear-gradient(135deg, rgba(240, 201, 135, 0.04), rgba(95, 168, 168, 0.04));
-  border: 1px solid rgba(240, 201, 135, 0.12);
-  border-radius: var(--radius-lg);
-  position: relative;
-  overflow: hidden;
-}
-.exp-outcome-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--accent), var(--primary));
-  border-radius: 2px;
-}
-
-.exp-outcome-header {
+.tr-learn-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--accent);
-  font-family: var(--font-subheading);
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
-}
-
-.exp-outcome-text {
-  font-size: 15px;
+  font-size: 13.5px;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin: 0;
 }
 
-/* ── Certificate Area ── */
-.exp-certificate {
-  padding: 36px 40px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.exp-cert-visual {
-  flex: 1;
-  min-width: 220px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.exp-cert-icon-wrap {
-  width: 72px;
-  height: 72px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(240, 201, 135, 0.08), rgba(95, 168, 168, 0.08));
-  border: 1px solid rgba(240, 201, 135, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
+.tr-dot {
+  width: 5px;
+  height: 5px;
   flex-shrink: 0;
-  transition: all var(--transition-base);
-}
-.exp-certificate:hover .exp-cert-icon-wrap {
-  box-shadow: 0 0 24px rgba(240, 201, 135, 0.1);
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0.7;
 }
 
-.exp-cert-text {
+/* Footer */
+.tr-footer {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.exp-cert-title {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text);
-  display: block;
-  margin-bottom: 2px;
-}
-
-.exp-cert-subtitle {
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-top: 1px solid var(--border);
   font-size: 13px;
   color: var(--text-tertiary);
-  display: block;
+}
+.tr-footer svg { color: var(--accent); flex-shrink: 0; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tr-header { padding: 20px; }
+  .tr-section { padding: 16px 20px; }
+  .tr-footer { padding: 14px 20px; }
+  .tr-learnings { grid-template-columns: 1fr; }
 }
 
-.exp-cert-btn {
-  flex-shrink: 0;
-}
 
 /* ═══════════════════════════════════════
    CERTIFICATIONS
