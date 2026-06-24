@@ -9,7 +9,8 @@ const projects = [
     summary: 'Intelligent traffic control using YOLOv8 computer vision for detecting emergency vehicles with 92% accuracy and dynamic signal management.',
     image: '/project1.png',
     tech: ['YOLOv8', 'Python', 'Flask', 'React', 'CV'],
-    github: 'https://github.com/Yogeshwari7887',
+    github: 'https://github.com/Yogeshwari7887/AI-Powered-Smart-Traffic-Management-System',
+    live: 'https://ai-powered-smart-traffic-management.onrender.com',
     fullDescription: 'Built an intelligent traffic control system using YOLOv8 computer vision capable of detecting emergency vehicles from CCTV footage with 92% accuracy.',
     problem: 'Emergency vehicles often lose valuable time due to conventional traffic systems that cannot dynamically adapt to urgent situations.',
     solution: 'Implemented emergency vehicle detection and dynamic signal synchronization to automatically create green corridors for faster emergency response.',
@@ -24,7 +25,8 @@ const projects = [
     summary: 'Full-stack organic e-commerce platform with authentication, cart management, coupons, admin dashboard, and order tracking.',
     image: '/project2.png',
     tech: ['Django', 'Python', 'JavaScript', 'Bootstrap', 'MySQL'],
-    github: 'https://github.com/Yogeshwari7887',
+    github: 'https://github.com/Yogeshwari7887/Growpure',
+    live: 'https://growpure.onrender.com',
     fullDescription: 'Developed a full-stack organic e-commerce platform focused on user experience, scalability, and real-world business workflows.',
     features: ['Authentication', 'Shopping Cart', 'Coupons & Discounts', 'Wishlist', 'User Dashboard', 'Admin Dashboard', 'Order Tracking', 'Responsive Design'],
     highlight: 'Demonstrates full-stack development skills, database integration, user management, and business workflow implementation.',
@@ -34,20 +36,22 @@ const projects = [
     summary: 'A platform focused on empathetic communication and supportive user interaction with structured guidance.',
     image: '/project3.png',
     tech: ['Django', 'Python', 'JavaScript', 'HTML', 'CSS'],
-    github: 'https://github.com/Yogeshwari7887',
+    github: 'https://github.com/Yogeshwari7887/personal-counselor',
+    live: 'http://yogeshwari-kalaskar.page.gd/',
     fullDescription: 'Designed and developed a platform focused on empathetic communication and supportive user interaction.',
     features: ['Structured Guidance', 'Ethical Interaction Design', 'User-Centric Experience', 'Conversational Support'],
     highlight: 'Creating meaningful and responsible digital interactions focused on empathy and user well-being.',
   },
   {
-    title: '2048 Puzzle Game',
-    summary: 'Fully functional 2048 puzzle game for Android with swipe controls, score tracking, and smooth gameplay experience.',
+    title: 'TaskFlow Pro — Task Management',
+    summary: 'Advanced Task Management System built with Spring Boot, Java, MariaDB, WebSockets, and Vanilla JavaScript featuring Kanban Workflow, Analytics, and Team Collaboration',
     image: '/project4.png',
-    tech: ['Java', 'Android Studio', 'XML'],
-    github: 'https://github.com/Yogeshwari7887',
-    fullDescription: 'Developed a fully functional 2048 puzzle game for Android using Java and Android Studio. Implemented tile merging mechanics, score tracking, responsive game logic, and smooth gameplay experience.',
-    features: ['Swipe Controls', 'Dynamic Tile Generation', 'Score Tracking', 'Win/Loss Detection', 'Smooth Animations', 'Mobile Optimized UI'],
-    highlight: 'Strengthened understanding of Android development, event handling, UI design, and game logic implementation.',
+    tech: ['Spring Boot', 'Java', 'MariaDB', 'WebSockets', 'JavaScript', 'JWT'],
+    github: 'https://github.com/Yogeshwari7887/task-manager',
+    live: 'https://task-manager-inky-delta-79.vercel.app/',
+    fullDescription: 'A production-level full-stack task management system built with Spring Boot 3.2.4, MariaDB, JWT authentication, WebSocket real-time updates, and a premium modern frontend.',
+    features: ['Kanban Workflow', 'Real-time Updates', 'JWT Authentication', 'Analytics Dashboard', 'Team Collaboration', 'Responsive UI'],
+    highlight: 'Demonstrates enterprise-grade backend architecture with real-time bidirectional communication and robust security.',
   },
 ];
 
@@ -119,6 +123,11 @@ function ProjectModal({ project, onClose }) {
           <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
             <Github size={15} /> GitHub
           </a>
+          {project.live && (
+            <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <ExternalLink size={15} /> Live Demo
+            </a>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -150,7 +159,12 @@ function ProjectCard({ project }) {
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary pcard-btn">
               <Github size={14} /> GitHub
             </a>
-            <button className="btn btn-primary pcard-btn" onClick={() => setModalOpen(true)}>Details</button>
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary pcard-btn">
+                <ExternalLink size={14} /> Live
+              </a>
+            )}
+            <button className="btn btn-secondary pcard-btn" onClick={() => setModalOpen(true)}>Details</button>
           </div>
         </div>
       </div>
