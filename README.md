@@ -87,21 +87,6 @@ npm install
 
 # 4. Start the dev server
 npm run dev
-```
-
----
-
-## 🔑 Environment Variables
-
-Create a `.env` file at the root and add your EmailJS credentials:
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-> Get your keys from [emailjs.com](https://www.emailjs.com/)
 
 ---
 

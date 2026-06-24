@@ -44,13 +44,13 @@ const projects = [
   },
   {
     title: 'TaskFlow Pro — Task Management',
-    summary: 'Advanced Task Management System built with Spring Boot, Java, MariaDB, WebSockets, and Vanilla JavaScript featuring Kanban Workflow, Analytics, and Team Collaboration',
+    summary: 'Task Management System built with Spring Boot, Java, WebSockets,Vanilla JavaScript featuring Kanban Workflow, Analytics, and Team Collaboration',
     image: '/project4.png',
-    tech: ['Spring Boot', 'Java', 'MariaDB', 'WebSockets', 'JavaScript', 'JWT'],
+    tech: ['Spring Boot', 'Java', 'WebSockets', 'JavaScript', 'JWT'],
     github: 'https://github.com/Yogeshwari7887/task-manager',
     live: 'https://task-manager-inky-delta-79.vercel.app/',
-    fullDescription: 'A production-level full-stack task management system built with Spring Boot 3.2.4, MariaDB, JWT authentication, WebSocket real-time updates, and a premium modern frontend.',
-    features: ['Kanban Workflow', 'Real-time Updates', 'JWT Authentication', 'Analytics Dashboard', 'Team Collaboration', 'Responsive UI'],
+    fullDescription: 'A production-level full-stack task management system built with Spring Boot 3.2.4, JWT authentication, WebSocket real-time updates.',
+    features: ['Kanban Workflow', 'Real-time Updates', 'Analytics Dashboard', 'Team Collaboration', 'Responsive UI'],
     highlight: 'Demonstrates enterprise-grade backend architecture with real-time bidirectional communication and robust security.',
   },
 ];

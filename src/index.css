@@ -8,15 +8,18 @@
   --bg: #0D1415;
   --bg-alt: #0f1819;
   --surface: #162325;
+  --surface-rgb: 22, 35, 37;
   --surface-hover: #1c2d2f;
   --surface-elevated: #1e3234;
+  --primary-rgb: 95, 168, 168;
   --primary: #5FA8A8;
   --primary-hover: #72b8b8;
-  --primary-muted: rgba(95, 168, 168, 0.15);
+  --primary-muted: rgba(var(--primary-rgb), 0.15);
   --secondary: #A8D5D5;
+  --accent-rgb: 240, 201, 135;
   --accent: #F0C987;
   --accent-hover: #f5d69e;
-  --accent-muted: rgba(240, 201, 135, 0.12);
+  --accent-muted: rgba(var(--accent-rgb), 0.12);
   --text: #F5F7F7;
   --text-secondary: #BFC8C9;
   --text-tertiary: #8a9496;
@@ -26,8 +29,8 @@
   --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.25);
   --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 40px rgba(95, 168, 168, 0.08);
-  --shadow-accent-glow: 0 0 40px rgba(240, 201, 135, 0.08);
+  --shadow-glow: 0 0 40px rgba(var(--primary-rgb), 0.08);
+  --shadow-accent-glow: 0 0 40px rgba(var(--accent-rgb), 0.08);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -103,7 +106,7 @@ input, textarea, select {
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(95, 168, 168, 0.3);
+  background: rgba(var(--primary-rgb), 0.3);
   color: var(--text);
 }
 
@@ -115,11 +118,11 @@ input, textarea, select {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(95, 168, 168, 0.3);
+  background: rgba(var(--primary-rgb), 0.3);
   border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(95, 168, 168, 0.5);
+  background: rgba(var(--primary-rgb), 0.5);
 }
 
 /* ── Focus ── */
@@ -257,7 +260,7 @@ section {
 }
 .btn-primary:hover {
   background: var(--primary-hover);
-  box-shadow: 0 4px 20px rgba(95, 168, 168, 0.3);
+  box-shadow: 0 4px 20px rgba(var(--primary-rgb), 0.3);
   transform: translateY(-1px);
 }
 
@@ -278,7 +281,7 @@ section {
 }
 .btn-accent:hover {
   background: var(--accent-hover);
-  box-shadow: 0 4px 20px rgba(240, 201, 135, 0.3);
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.3);
   transform: translateY(-1px);
 }
 
@@ -294,13 +297,13 @@ section {
   border-radius: var(--radius-full);
   background: var(--primary-muted);
   color: var(--secondary);
-  border: 1px solid rgba(95, 168, 168, 0.15);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
   transition: all var(--transition-fast);
 }
 
 .badge:hover {
-  background: rgba(95, 168, 168, 0.22);
-  border-color: rgba(95, 168, 168, 0.3);
+  background: rgba(var(--primary-rgb), 0.22);
+  border-color: rgba(var(--primary-rgb), 0.3);
   transform: translateY(-1px);
 }
 
